@@ -15,6 +15,13 @@ struct ContentView: View {
             List {
                 ForEach(vm.quotes) { quote in
                     Text(quote.content)
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                vm.deleteQuote(quoteToDelete: quote)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
                 }
             }
             .onAppear {
@@ -37,6 +44,11 @@ struct ContentView: View {
                 }
             }
         }
+    }
+    
+    func delete(_ quote: Quote, _ index: Int) {
+    vm.quotes.remove(at: index)
+        QuoteRepository.shared.deleteQuote(quote: quote)
     }
 }
 

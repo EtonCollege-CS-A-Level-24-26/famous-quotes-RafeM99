@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		07A6974F2D8C9BDD0049BA8F /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 07A6974E2D8C9BDD0049BA8F /* ParseSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B48F405D2D89D4DC0063D229 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A6974F2D8C9BDD0049BA8F /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = FamousQuotesParse;
 			packageProductDependencies = (
+				07A6974E2D8C9BDD0049BA8F /* ParseSwift */,
 			);
 			productName = FamousQuotesParse;
 			productReference = B48F404C2D89D4DA0063D229 /* FamousQuotesParse.app */;
@@ -196,6 +202,7 @@
 			mainGroup = B48F40432D89D4D90063D229;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				07A6974D2D8C9BDD0049BA8F /* XCRemoteSwiftPackageReference "Parse-Swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B48F404D2D89D4DA0063D229 /* Products */;
@@ -398,6 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FamousQuotesParse/Preview Content\"";
+				DEVELOPMENT_TEAM = N4C6XM4UBS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -426,6 +434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FamousQuotesParse/Preview Content\"";
+				DEVELOPMENT_TEAM = N4C6XM4UBS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -554,6 +563,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07A6974D2D8C9BDD0049BA8F /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.14.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07A6974E2D8C9BDD0049BA8F /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07A6974D2D8C9BDD0049BA8F /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B48F40442D89D4D90063D229 /* Project object */;
 }
