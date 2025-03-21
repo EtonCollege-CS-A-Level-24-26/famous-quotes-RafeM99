@@ -36,4 +36,17 @@ class FamousQuotesViewModel {
         newQuoteContent = ""
         isShowingAddQuote = false
     }
+    
+    func deleteQuote(quoteToDelete: Quote) {
+        QuoteRepository.shared.getAllQuotes(completion: { quotes in
+            self.quotes = quotes
+        })
+        
+        for i in 0..<quotes.count {
+            if quotes[i].content == quoteToDelete.content {
+                QuoteRepository.shared.deleteQuote(quote: quotes[i])
+                quotes.remove(at: i)
+            }
+        }
+    }
 }
